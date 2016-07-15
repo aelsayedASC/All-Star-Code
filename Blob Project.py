@@ -97,17 +97,19 @@ def findColorSpot(picture, color):
 
 ######################Code Starts Here##################################
 angle=randrange(0,270)
-lowAngle=randrange(-10,20)
-highAngle=randrange(0,30)
+lowAngle=-15
+highAngle=15
 turnBy(angle)
 takePicture()
 picture=takePicture()
 show(picture)
 greenLocation=findColorSpot(picture,target)
 while True:
+    print(greenLocation)
     if greenLocation==-1:
         stop()
-        print("You have found the"+ target+" blob!")
+        print("You have found the target blob!")
+        break
     elif greenLocation==0:
         turnBy(angle)
         takePicture()
@@ -115,17 +117,14 @@ while True:
         show(picture)
         greenLocation=findColorSpot(picture,target)
     
-    elif greenLocation>100 and greenLocation<=140:
+    elif greenLocation>128 and greenLocation<=256:
         turnBy(lowAngle)
-        forward(1,6)
-        
-    elif greenLocation>0 and greenLocation<100:
-        turnBy(highAngle)
+        forward(1,3)
         takePicture()
         picture=takePicture()
         show(picture)
-        greenLocation=findColorSpot(picture,target)   
-    elif greenLocation>128 and greenLocation<=255:
+        greenLocation=findColorSpot(picture,target)
+    elif greenLocation>0 and greenLocation<=128:
         turnBy(highAngle)
         takePicture()
         picture=takePicture()
