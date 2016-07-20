@@ -1,5 +1,6 @@
 from Processing import *
 from random import *
+from sys import exit
 #Sets the size of the window
 window(700,600)
 
@@ -12,6 +13,8 @@ speedconst = 15
 right = choice([True, False])
 up = choice([True, False])
 paddleTop=250
+player1Score=0
+player2Score=0
 while True:
         global paddleTop
         #Fancy stuff for the ball itself
@@ -43,10 +46,33 @@ while True:
         ellipse(centerX,centerY,50,50)
         #If the ball(Y value) is anywhere between 0 and 30 then it'll go down.
         if centerY<=30:
-            up=False
+            text("Player 1 has scored",200,300)
+            delay(1000)
+            centerX=350
+            centerY=300
+            player1Score+=1
+            if player1Score==5:
+                answer1=input(("Would you like to have a rematch? Write \"Y\" for yes and \"N\" for no"))
+                if answer1=="y" or answer1=="Y":
+                    player1Score=0
+                    pass
+                else:
+                    exit()
         #If the ball(Y value) is anywhere between 570 and 600 then it'll go up.
         if centerY>=570:
-            up=True
+            text("Player 2 has scored",200,300)
+            delay(1000)
+            centerX=350
+            centerY=300
+            player2Score+=1
+            if player2Score==5:
+                answer2=input("Would you like to have a rematch? Write \"Y\" for yes and \"N\" for no")
+                if answer2=="y" or answer2=="Y":
+                    player2Score=0
+                    pass
+                else:
+                    exit()
+                    
         #If the ball(X value) is anywhere between 0 and 34 then it'll go right.
         if centerX<=34:
             right=True
@@ -57,5 +83,6 @@ while True:
         if centerY>=465 and mouseX()<=centerX< mouseX() + 200:
             up=True
         #If the ball is between the ends of the top paddle it will bounce down.
-        if centerY<=170 and paddleTop<=centerX<=paddleTop+ 200:
+        if centerY<=165 and paddleTop<=centerX<=paddleTop+ 200:
             up=False
+        smooth()

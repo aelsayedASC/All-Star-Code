@@ -74,7 +74,7 @@ def draw():
             fill(255)
             rect(103,0,597,500)
             fill(0)
-            stroke(15)
+            stroke(150)
         if isMousePressed()==True and mouseX()>103 and mouseX()<697:
             line(pmouseX(),pmouseY(),mouseX(),mouseY())
 draw()
