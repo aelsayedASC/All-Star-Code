@@ -20,16 +20,15 @@ idx1 = randrange(0,len(grid[0]))
 idx2 = randrange(0,len(grid[0]))
 grid[idx1][idx2] = 0
 turns=0
-guessX=int(input("Enter the row number:"))
-guessY=int(input("Enter the column number:"))
-guess=grid[guessX][guessY]
-while guess!=grid[idx1][idx2] or turns>=5:    
+gameOver=False
+while gameOver==False or turns>=5:    
     guessX=int(input("Enter the row number:"))
     guessY=int(input("Enter the column number:"))
     guess=grid[guessX][guessY]       
     if guess== 0:
         print("You win!!!")
         delay (1000)
+        gameOver=True
         break
     elif guess==1 :       
         grid[guessX][guessY]= 2
@@ -51,7 +50,7 @@ while guess!=grid[idx1][idx2] or turns>=5:
         draw()
         turns+=1
         print("Try again")
-    elif turns>=5:
+    if turns>=5:
         print("You have failed!")
         delay(1000)
         break
