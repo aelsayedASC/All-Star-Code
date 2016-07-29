@@ -1,0 +1,105 @@
+body{
+    background-color:cadetblue;
+}
+h1{
+    font-size:50px;
+    margin-left: 6%;
+    margin-top:10%;
+    font-family: Charcoal;
+}
+h2{
+    font-family:Broadway;
+}
+p{
+font-size:40px;
+font-family:"Times New Roman";
+}
+li{
+    font-size:40px;
+    font-family:"Times New Roman";
+}
+#nameBox{
+    background-color:goldenrod;
+    height:100px;
+    width:810px;
+    margin-left:20%;
+    margin-top:10%;
+}
+h2{
+    font-size:30px;
+}
+a{
+    text-decoration: none;
+    color: rebeccapurple;
+}
+#Box1{
+    border: 2px solid darkgoldenrod;
+    border-radius: 30px;
+    width:300px;
+    margin-top:100px;
+    margin-left:20%;
+    background-color:darkgoldenrod;
+    text-align: center;
+    transition: color 2s, background-color 2s;
+}
+#Box1:hover{
+    color:red;
+    background-color:dodgerblue;
+}
+#Box2{
+    border: 2px solid darkgoldenrod;
+    border-radius: 30px;
+    width:300px;
+    margin-top:100px;
+    margin-left:20%;
+    background-color:darkgoldenrod;
+    text-align: center;
+    transition: color 2s, background-color 2s;
+}
+#Box2:hover{
+    color:red;
+    background-color:dodgerblue;
+}
+#Box3{
+    border: 2px solid darkgoldenrod;
+    border-radius: 30px;
+    width:300px;
+    margin-top:-275.5px;
+    margin-left:58%;
+    background-color:darkgoldenrod;
+    text-align: center;
+    transition: color 2s, background-color 2s;
+}
+#Box3:hover{
+    color:red;
+    background-color:dodgerblue;
+}
+#Box4{
+    border: 2px solid darkgoldenrod;
+    border-radius: 30px;
+    width:300px;
+    margin-top:100px;
+    margin-left:58%;
+    background-color:darkgoldenrod;
+    text-align: center;
+    transition: color 2s, background-color 2s;
+}
+#Box4:hover{
+    color:red;
+    background-color:dodgerblue;
+}
+hr{
+    height:5px;
+    margin-top:50px;
+    background-color: dimgrey;
+}
+#actualText{
+    margin-top:10px;
+}
+#actualText h2{
+    font-size:40px;
+}
+#Award{
+    margin-left:575px;
+    margin-top:-17%;
+}
