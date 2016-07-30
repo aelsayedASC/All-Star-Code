@@ -13,13 +13,14 @@ $(function() {
     }
   });
 });
-$("#myTopnav").hide();
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-myFunction()
+(function($) {          
+    $(document).ready(function(){                    
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > 620) {
+                $('#nav').fadeIn(500);
+            } else {
+                $('#nav').fadeOut(500);
+            }
+        });
+    });
+})(jQuery);
