@@ -1,3 +1,14 @@
+var database = firebase.database().ref();
+function sendMessage(){
+    var name = $('#name').val();
+    var message = $('#message').val();
+    //Sending messages
+    database.push({
+        'name':name,
+        'message':message
+    });
+    
+}
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -24,3 +35,4 @@ $(function() {
         });
     });
 })(jQuery);
+

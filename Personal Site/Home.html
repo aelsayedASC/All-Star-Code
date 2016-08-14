@@ -3,9 +3,21 @@
     <title>The Personal Website of Abdelrahman</title>
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="Mechanics.js" type="text/javascript"></script>
+    
 </head>
 <body>
+        <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCtCPnrZ2yytC1oXq9J_mRgXOLDG57RjRg",
+            authDomain: "personal-website-e9213.firebaseapp.com",
+            databaseURL: "https://personal-website-e9213.firebaseio.com",
+            storageBucket: "personal-website-e9213.appspot.com",
+          };
+          firebase.initializeApp(config);
+        </script>
+    <script src="Mechanics.js" type="text/javascript"></script>
     <div id="curtainTop">
         <a name="Home"><img src="Curtain%20Top.png" height=120 width=1348></a>
     </div>
@@ -16,6 +28,7 @@
       <li><a href="#awardAch">Awards/Achievements</a></li>
       <li><a href="#Facts">Facts about me</a></li>
       <li><a href="#Links">Links</a></li>
+      <li><a href="#Contact">Contact</a></li>
     </ul>
     <div id="nameBox">
         <h1>Abdelrahman Uosri Elsayed</h1>
@@ -71,5 +84,20 @@
                 <li><a href="https://github.com/aelsayedASC">Github</a></li>
                 <li><a href="http://myanimelist.net/profile/Archlux">Myanimelist</a></li>
             </ul>
+        <hr>
+            <!-- What user will use for input -->
+        <div id="Contact">
+            <h2><a name="Contact"><u>Contact Information</u></a></h2>
+            <input placeholder='Name' type='text' id='name'>
+            <input placeholder='Email' type='text' id='message'>
+            <!-- button for sending message to message board -->
+            <button onclick='sendMessage()' id='js'>Submit</button>
+            <!-- Empty div where the messages will show up -->
+            <div id='messageBoard'></div>
+            <!-- Paste your snippet here, will include firebase CDN -->
+
+
+
+    </div>
     </div>
 </body>
