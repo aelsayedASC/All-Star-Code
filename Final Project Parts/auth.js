@@ -3,22 +3,7 @@ var gapikey = 'AIzaSyCKMpw2nmPnon_gkh4EIXnbiAmrZNw-v4M';
 $(function() {
     
     // call fancybox pluggin (note: linked in in codepen js settings)
-    $(".fancyboxIframe").fancybox({
-        maxWidth	: 900,
-        maxHeight	: 600,
-        fitToView	: false,
-        width		: '90%',
-        height		: '90%',
-        autoSize	: false,
-        closeClick	: false,
-        openEffect	: 'none',
-        closeEffect	: 'none',
-        iframe: {
-            scrolling : 'auto',
-            preload   : true
-        }
-    });
-    
+
     var searchField = $('#query');
     var icon = $('#search-btn');
     
